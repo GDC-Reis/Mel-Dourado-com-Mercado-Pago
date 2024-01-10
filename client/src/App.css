@@ -1,4 +1,12 @@
-.container {
-  min-height: 60vh;
-  margin-bottom: 5em;
+@font-face{
+  font-family: 'Montserrat', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  text-align: center;
 }

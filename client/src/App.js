@@ -39,11 +39,15 @@ function App() {
 
   return (
     <div className="App">
+      <img />
+      <h1>Mel Dourado</h1>
      <AuthProvider value={{user}}>
       <BrowserRouter>
-        <h1>Mel Dourado</h1>
+      {/* <div></div>
+        <h1>Mel Dourado</h1> */}
         <Navbar/>
           <Routes>
+            <Route path='/' element={<Home/>}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/register' element={ !user ? <Register/> : <Navigate to="/home"/>}/>
             <Route path='/login' element={ !user ? <Login/> : <Navigate to="/home"/> }/>

@@ -14,30 +14,40 @@ const Navbar = () => {
     return ( 
         <nav>
            
-            <NavLink to="/home">Home</NavLink>
+           <ul className="nav_link">
+                <li><NavLink to="/home">Home</NavLink></li>
+           </ul>
+            
             
             {!user && (
-                <> 
+                
+                <ul className="nav_link"> 
                     <li>
                         <NavLink to="/register">Cadastrar</NavLink>
                     </li>
-                    
+            
                     <li>
                         <NavLink to="/login">Login</NavLink>
                     </li>
                     
-                </>
+                </ul>
             )}
             
+            <ul className="nav_link">
+                <li><NavLink to="/about">Sobre</NavLink></li>
+            </ul>
             
-            <NavLink to="/about">Sobre</NavLink>  
-
-            <NavLink to="/product">Produtos</NavLink>
+            <ul className="nav_link">
+                <li><NavLink to="/product">Produtos</NavLink></li>
+            </ul>
 
             {user && (
-                <li>
-                    <button onClick={logout}>Sair</button>
-                </li>
+                <ul className="nav_link">
+                    <li>
+                        <button onClick={logout}>Sair</button>
+                    </li>
+                </ul>
+                
             )}
 
             
